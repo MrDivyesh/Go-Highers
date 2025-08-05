@@ -17,7 +17,7 @@ import logo from '../assets/header/logo.png';
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  { label: 'Services', to: '/`service`' },
+  { label: 'Services', to: '/service' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'Team', to: '/team' },
   { label: 'Contact', to: '/contact' },
