@@ -1,0 +1,224 @@
+.team-3d-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 480px;
+  /* background: #181818; */
+  border-radius: 24px;
+  padding: 40px 0 80px 0; /* extra bottom padding for buttons */
+}
+
+.carousel-3d-track {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  perspective: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-3d-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+  height: 320px;
+  transform:
+    translateX(calc(var(--offset) * 260px))
+    scale(calc(1 - 0.15 * var(--abs-offset)))
+    rotateY(calc(var(--offset) * -35deg));
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), z-index 0.3s, opacity 0.3s;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border-radius: 18px;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+}
+
+.carousel-3d-item img {
+  width: 200px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+.carousel-3d-item .caption {
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 16px 0 0 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.carousel-3d-item.active {
+  box-shadow: 0 12px 40px 0 #3e3f3f55;
+  background: #222;
+}
+
+.carousel-3d-controls-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 32px; /* adjust as needed */
+  z-index: 20;
+}
+
+.carousel-arrow {
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0 16px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 0;
+  transition: background 0.2s;
+  opacity: 0.7;
+}
+.carousel-arrow:hover {
+  background: #E68446;
+  color: #fff;
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  .carousel-3d-track {
+    width: 90vw;
+    max-width: 600px;
+    height: 320px;
+  }
+  .carousel-3d-item {
+    width: 140px;
+    height: 200px;
+  }
+  .carousel-3d-item img {
+    width: 120px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .team-3d-carousel {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 10px 0 60px 0;
+    overflow: hidden;
+  }
+  .carousel-3d-track {
+    width: 100vw;
+    max-width: 100vw;
+    height: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: visible;
+  }
+  .carousel-3d-item {
+    width: 90px;
+    height: 130px;
+    /* Increase the translateX multiplier for better spacing */
+    transform:
+      translateX(calc(var(--offset) * 110px))
+      scale(calc(1 - 0.15 * var(--abs-offset)))
+      rotateY(calc(var(--offset) * -35deg));
+  }
+  .carousel-3d-item img {
+    width: 80px;
+    height: 100px;
+  }
+  .carousel-3d-item .caption {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    margin-top: 8px;
+  }
+  .carousel-3d-controls-centered {
+    gap: 16px;
+    bottom: 8px;
+  }
+  .carousel-arrow {
+    font-size: 1.3rem;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel-3d-track {
+    width: 100vw;
+    max-width: 180px;
+    height: 90px;
+  }
+  .carousel-3d-item {
+    width: 40px;
+    height: 55px;
+    transform:
+      translateX(calc(var(--offset) * 45px))
+      scale(calc(1 - 0.15 * var(--abs-offset)))
+      rotateY(calc(var(--offset) * -35deg));
+  }
+  .carousel-3d-item img {
+    width: 35px;
+    height: 40px;
+  }
+  .carousel-3d-item .caption {
+    font-size: 0.5rem;
+    padding: 2px 4px;
+    margin-top: 4px;
+  }
+}
+
+.team-info {
+  width: 100%;
+  padding: 10px 0 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 4px;
+  margin-top: 0;
+  text-shadow: 0 1px 8px #0008;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.team-position {
+  background: #a05a2c;
+  color: #fff;
+  border-radius: 8px;
+  padding: 4px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  margin-top: 2px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(255,145,77,0.10);
+  white-space: normal;
+  word-break: break-word;
+  max-width: 90%;
+  overflow-wrap: break-word;
+}
+
+.carousel-3d-item:not(.active) .team-position {
+  display: none;
+}
+.carousel-3d-item.active:hover .team-position {
+  display: inline-block;
+  opacity: 1;
+}

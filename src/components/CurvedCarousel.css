@@ -1,0 +1,124 @@
+.curved-carousel {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  
+  --curve-height: 120px;
+  --v-offset: 60px;
+}
+
+.curved-carousel:before,
+.curved-carousel:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: var(--curve-height);
+  background: white;
+  border-radius: 30%;
+  z-index: 1;
+}
+
+.curved-carousel:before {
+  top: calc(-0.5 * var(--curve-height));
+}
+
+.curved-carousel:after {
+  bottom: calc(-0.5 * var(--curve-height));
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 300px;
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  overflow: auto;
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-5px);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.carousel-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.carousel-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Custom scrollbar for the wrapper */
+.wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.arc-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.arc-element {
+  position: absolute;
+  left: 50%;
+  background-color: tomato;
+  color: #fff;
+  width: 120px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transform: translateY(-400px) rotate(var(--angle)) translateY(400px) rotate(calc(-1 * var(--angle)));
+  transition: transform 0.5s;
+} 

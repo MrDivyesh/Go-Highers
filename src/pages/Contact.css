@@ -1,0 +1,271 @@
+.contact-section {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.contact-container {
+  display: flex;
+  gap: 60px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 32px;
+  align-items: flex-start;
+  margin-top: 150px;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1 1 0;
+  min-width: 320px;
+  max-width: 420px;
+}
+
+.contact-label {
+  font-size: 1rem;
+  color: #222;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #191919;
+  line-height: 1.1;
+}
+
+.contact-desc {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 32px;
+}
+
+.contact-details {
+  margin-top: 24px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  margin-right: 12px;
+}
+
+.contact-form {
+  flex: 2 1 0;
+  min-width: 320px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 32px 24px 32px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 24px;
+}
+
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  flex: 1 1 0;
+}
+
+.contact-form-group label {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.required {
+  color: #ff7300;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  border: 1.5px solid #eee;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  background: #fff;
+  color: #222;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  border-color: #ff7300;
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.checkbox-group input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.highlight {
+  color: #ff7300;
+}
+
+.contact-btn {
+  background: #ff7300;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 48px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+  transition: background 0.2s;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.contact-btn:hover {
+  background: #ff9500;
+}
+
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 32px 0;
+  }
+  .contact-container {
+    flex-direction: column;
+    gap: 32px;
+    margin: 0 8px;
+    align-items: stretch;
+    margin-top: 60px;
+  }
+  .contact-info, .contact-form {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .contact-form {
+    padding: 16px 6px;
+  }
+  .contact-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 16px 0;
+  }
+  .contact-title {
+    font-size: 2rem;
+  }
+  .contact-label {
+    font-size: 0.9rem;
+  }
+  .contact-desc {
+    font-size: 1rem;
+  }
+  .contact-info, .contact-form {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .contact-form {
+    padding: 10px 0;
+  }
+  .contact-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-section {
+    padding: 8px 0;
+  }
+  .contact-title {
+    font-size: 1.3rem;
+  }
+  .contact-form-group label {
+    font-size: 0.95rem;
+  }
+  .contact-form-group input,
+  .contact-form-group textarea {
+    font-size: 0.95rem;
+    padding: 10px 8px;
+  }
+  .contact-form {
+    padding: 4px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-map-container {
+    min-height: 350px;
+  }
+  .contact-map-container iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-map-container {
+    min-height: 220px;
+  }
+  .contact-map-container iframe {
+    height: 220px;
+  }
+}
+
+.contact-map-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  min-height: 600px;
+}
+
+.contact-map-container iframe {
+  width: 100vw;
+  max-width: 100%;
+  height: 600px;
+  border: none;
+  display: block;
+  /* The filter below inverts and darkens the map for a dark theme */
+  filter: invert(90%) hue-rotate(180deg);
+}
