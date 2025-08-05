@@ -28,7 +28,7 @@ const Portfolio = () => (
       textAlign: 'center',
       fontWeight: 700,
       fontSize: '3rem',
-      margin: '60px 0 40px 0',
+      margin: '120px 0 40px 0',
       letterSpacing: '1px'
     }}>
       Our Portfolio

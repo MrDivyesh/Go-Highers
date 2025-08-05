@@ -8,7 +8,7 @@ import Service from './pages/Service';
 import Team from './pages/Team';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
-import Chatbot from './components/Chatbot';
+// import Chatbot from './components/Chatbot';
 
 // Scroll to top component
 function ScrollToTop() {
@@ -46,7 +46,7 @@ function App() {
       <Header />
       <AppRoutes />
       <Footer />
-      <Chatbot />
+      {/* <Chatbot /> */}
     </BrowserRouter>
   );
 }
